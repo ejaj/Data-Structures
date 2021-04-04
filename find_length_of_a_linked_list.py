@@ -3,35 +3,37 @@ class Node:
         self.data = data
         self.next = None
 
-
 class LinkedList:
     def __init__(self):
         self.head = None
 
     def push(self, new_data):
+        """
+        insert node
+        :param new_data:
+        :return:
+        """
         new_node = Node(new_data)
         new_node.next = self.head
         self.head = new_node
 
-    def deleteList(self):
+    def getCount(self):
+        """
+        Get link List count
+        :return:
+        """
+        count = 0
         current = self.head
         while current:
-            prev = current.next
-            del current.data
-            current = prev
+            count += 1
+            current = current.next
+        return count
 
-
-# Use push() to construct below
-# list 1-> 12-> 1-> 4-> 1
-if __name__ == '__main__':
+if __name__=='__main__':
     llist = LinkedList()
     llist.push(1)
-    llist.push(4)
+    llist.push(3)
     llist.push(1)
-    llist.push(12)
+    llist.push(2)
     llist.push(1)
-
-    print("Deleting linked list")
-    llist.deleteList()
-
-    print("Linked list deleted")
+    print ("Count of nodes is :",llist.getCount())
