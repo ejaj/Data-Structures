@@ -28,7 +28,7 @@ class LinkList:
         :return:
         """
         if prev_node is None:
-            print("The given previous node must inLinkedList.")
+            print("The given previous node must in LinkedList.")
             return
 
         new_node = Node(new_data)
