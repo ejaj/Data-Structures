@@ -52,7 +52,7 @@ def main():
     arr = [1, 3, 4, 5]
     target = 7
     print(pair_sum(arr, target))
-    print pair_sum1(arr, target)
+    print(pair_sum1(arr, target))
 
 
 if __name__ == '__main__':
