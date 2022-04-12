@@ -8,3 +8,5 @@ References:
 4. https://www.youtube.com/watch?v=XKu_SEDAykw
 5. https://www.linkedin.com/pulse/part-1-how-calculate-time-space-complexity-simple-programs-aneja/
 6. https://en.wikipedia.org/wiki/List_of_data_structures
+7. https://en.wikipedia.org/wiki/Hash_table
+8. https://www.cs.usfca.edu/~galles/visualization/OpenHash.html
