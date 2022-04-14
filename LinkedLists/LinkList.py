@@ -1,17 +1,24 @@
 class Node:
     def __init__(self, data):
+        """
+        :param data:
+        """
         self.data = data
         self.next = None
 
 
 class LinkList:
-    # Function to initialize head
+    """
+    A Link List Class
+    """
+
     def __init__(self):
         self.head = None
 
-    # Function to insert a new node at the beginning
     def push(self, new_data):
         """
+        Inert a new node at the beginning.
+        Time Complexity: O(1)
         :param new_data:
         :return:
         """
@@ -19,10 +26,9 @@ class LinkList:
         new_node.next = self.head
         self.head = new_node
 
-    # Function to insert a new node to given node.
-    def insertAfter(self, prev_node, new_data):
+    def insert_after(self, prev_node, new_data):
         """
-
+        Inert a new node after given node.
         :param prev_node:
         :param new_data:
         :return:
@@ -35,10 +41,10 @@ class LinkList:
         new_node.next = prev_node.next
         prev_node.next = new_node
 
-    # Function to insert a new node at the end.
     def append(self, new_data):
         """
-
+        Inert a new node at the end.
+        Time Complexity: O(1)
         :param new_data:
         :return:
         """
@@ -51,10 +57,10 @@ class LinkList:
             last = last.next
         last.next = new_node
 
-    # Given a reference to the head of a list and a key,
-    # delete the first occurence of key in linked list
-    def deleteNode(self, key):
+    def delete_node(self, key):
         """
+        Delete node, the first occurence of key in linked list.
+        Time Complexity: O(n)
         :param key:
         :return:
         """
@@ -74,18 +80,32 @@ class LinkList:
         prev.next = cur_node.next
         cur_node = None
 
-    def printList(self):
+    def print_list(self):
+        """
+        Print all node
+        Time Complexity: O(n)
+        :return:
+        """
         temp = self.head
         while temp:
             print(temp.data)
             temp = temp.next
 
 
-llist = LinkList()
-llist.push(1)
-llist.push(2)
-llist.push(3)
-llist.insertAfter(llist.head.next, 6)
-llist.append(4)
-llist.deleteNode(1)
-llist.printList()
+def main():
+    """
+    Main function to drive code
+    :return:
+    """
+    llist = LinkList()
+    llist.push(1)
+    llist.push(2)
+    llist.push(3)
+    llist.insert_after(llist.head.next, 6)
+    llist.append(4)
+    llist.delete_node(1)
+    llist.print_list()
+
+
+if __name__ == '__main__':
+    main()
