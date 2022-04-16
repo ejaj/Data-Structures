@@ -44,7 +44,7 @@ class LinkList:
     def append(self, new_data):
         """
         Inert a new node at the end.
-        Time Complexity: O(1)
+        Time Complexity: O(n)
         :param new_data:
         :return:
         """
@@ -65,20 +65,42 @@ class LinkList:
         :return:
         """
         cur_node = self.head
-
+        # if head node hold key
         if cur_node and cur_node.data == key:
             self.head = cur_node.next
             cur_node = None
             return
+
+        # Search for the key to be deleted
         while cur_node is not None:
             if cur_node.data == key:
                 break
             prev = cur_node
+
             cur_node = cur_node.next
+
         if cur_node == None:
             return
         prev.next = cur_node.next
         cur_node = None
+
+    def sort_linked_list(self, head):
+        """
+        Sorted Linked List
+        :param head:
+        :return:
+        """
+        current = head
+        if head is None:
+            return
+        else:
+            while current is not None:
+                index = current.next
+                while index is not None:
+                    if current.data > index.data:
+                        current.data, index.data = index.data, current.data
+                    index = index.next
+                current = current.next
 
     def print_list(self):
         """
@@ -104,6 +126,9 @@ def main():
     llist.insert_after(llist.head.next, 6)
     llist.append(4)
     llist.delete_node(1)
+    llist.print_list()
+    llist.sort_linked_list(llist.head)
+    print("Sorted List: ")
     llist.print_list()
 
 
