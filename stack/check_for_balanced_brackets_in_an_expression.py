@@ -1,4 +1,4 @@
-def areBracketsBalanced(expr):
+def are_brackets_balanced(expr):
     stack = []
 
     for char in expr:
@@ -9,7 +9,7 @@ def areBracketsBalanced(expr):
                 return False
         current_char = stack.pop()
         if current_char == "(":
-            if char !=")":
+            if char != ")":
                 return False
         if current_char == '{':
             if char != "}":
@@ -22,10 +22,14 @@ def areBracketsBalanced(expr):
     return True
 
 
-if __name__ == "__main__":
+def main():
     expr = "{()}[]"
 
-    if areBracketsBalanced(expr):
+    if are_brackets_balanced(expr):
         print("Balanced")
     else:
         print("Not Balanced")
+
+
+if __name__ == "__main__":
+    main()

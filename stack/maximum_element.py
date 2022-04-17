@@ -4,7 +4,7 @@ for _ in range(int(input())):
 
     if q[0] == 1:
         if stack:
-            stack.append(max(stack[-1],q[1]))
+            stack.append(max(stack[-1], q[1]))
         else:
             stack.append(q[1])
     elif q[0] == 2:
