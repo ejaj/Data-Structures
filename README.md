@@ -11,3 +11,5 @@ References:
 7. https://en.wikipedia.org/wiki/Hash_table
 8. https://www.cs.usfca.edu/~galles/visualization/OpenHash.html
 9. https://visualgo.net/en
+10. https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
+11. https://internet-map.net/
