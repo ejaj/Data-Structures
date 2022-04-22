@@ -5,7 +5,8 @@
 @Author : kazi
 @File : adjacency_list.py
 @Time : 4/20/22 1:21 PM
-@Desc: 
+@Desc:
+graph = [[1,2] [2,3] [3,1]]
 """
 
 

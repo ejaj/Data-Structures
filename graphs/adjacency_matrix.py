@@ -5,7 +5,12 @@
 @Author : kazi
 @File : adjacency_matrix.py
 @Time : 4/21/22 12:13 AM
-@Desc: 
+@Desc:
+graph = [
+    [0,0,1],
+    [1,0,0],
+    [0,0,1]
+]
 """
 
 
